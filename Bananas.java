@@ -1,12 +1,23 @@
-public class Bananas {
 
-    static int  n = 400;
-    static int load = 17;
+import java.util.Scanner;
+
+public class Bananas {
+    static int load ;
+
+
     static int cons;
-    static int miles = 1;
+
     static int left_over= 0;
 
+
     public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the load  :");
+        load = scan.nextInt();
+        int  n = 10*load;
+        int miles = 0;
         for( int i = 0; i< load; i++){
             if(n%load== 0 ){
                 cons = (n/load )*2 -1;
