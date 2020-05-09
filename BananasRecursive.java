@@ -7,6 +7,7 @@ public class BananasRecursive {
 
     public static int val;
     public static int counter= 0;
+    public static int  left_over = 0;
     public static ArrayList<Integer> memo = new ArrayList<Integer>();
 
 
@@ -25,6 +26,7 @@ public class BananasRecursive {
             if (Bananas(n - 1) % load == 0) {
                 val = Bananas(n - 1) - ((Bananas(n - 1) /load) * 2 - 1);
             } else if (Bananas(n - 1) % load == 1) {
+                left_over++;
                 val =  Bananas(n - 1) - 1 - ( (Bananas(n - 1)/load) * 2 - 1) ;
             } else {
                 val =  Bananas(n - 1) - ( (Bananas(n - 1)/load) * 2 + 1);
@@ -46,6 +48,7 @@ public class BananasRecursive {
         System.out.println(initial_amount);
         System.out.println(Bananas(load -1));
         System.out.println(counter);
+        System.out.println("Leftovers  :"+ left_over);
         int k = 0;
         for(Integer integer: memo){
             k = k+1;
