@@ -35,7 +35,6 @@ public class CollectOne {
         System.out.println("q is ");
         int q = scan.nextInt();
 
-
         int difa;
         a.add(0);
         b.add(0);
@@ -49,7 +48,6 @@ public class CollectOne {
             if( a.get(index)< p){
                 difa = p - a.get(index);
                 if ( b.get(index) < difa){
-
                     a.add(a.get(index) + b.get(index));
                     b.add(0);
                     c.add(c.get(index));
