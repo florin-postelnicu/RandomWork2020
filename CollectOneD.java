@@ -7,8 +7,8 @@ There are 3 jars. The first jar ( a)  can hold p litters, the second jar (b)
 can hold q litters, and the third jar (c) contains p + q litters.
 p, q are relatively prime numbers.
 At the beginning jars a, and b are empty(0 litters) and jar c has p + q litters.
-The objective is to obtain exactly 1 litter by transferring watter from one jar to another.
-You are not allowed to discharge any watter.
+The objective is to obtain exactly 1 litter by transferring water from one jar to another.
+You are not allowed to discharge any water.
 For example : a = 5 litters capacity
               b = 7 litters capacity
               c = 12 litters capacity.
@@ -38,8 +38,8 @@ public class CollectOneD {
         int p = scan.nextInt();
         System.out.println("q is ");
         int q = scan.nextInt();
-        System.out.println(" cmmdc of " + p + "  and  "+ q + "  is "+ cmmdc(p,q) );
-        int d = cmmdc(p,q);
+        System.out.println(" gcd of " + p + "  and  "+ q + "  is "+ gcd(p,q) );
+        int d = gcd(p,q);
 
         int difa;
         a.add(0);
@@ -85,7 +85,7 @@ public class CollectOneD {
 
 
 
-    private static Integer  cmmdc(int x,int y){
+    private static Integer  gcd(int x,int y){
 
         while(x != y) {
             if( x> y){
