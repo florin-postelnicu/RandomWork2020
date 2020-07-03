@@ -4,8 +4,8 @@
 /*
 Problem:
 Given two balls and a building of 100 flats,
- how can you find the highest flat
-from where you can drop a ball without breaking it
+how can you find the highest flat
+from where you can drop a ball without breaking it,
 using the lowest number of attempts?
 The balls are identical.
  */
@@ -34,25 +34,15 @@ public class Huevos<rank> {
         Flist.add(0);
 
         do {
-
             rank = rank + floor;
             Flist.add(rank);
             attempt ++;
             int sum =  attempt - 1 + Flist.get(attempt) - Flist.get(attempt -1);
             System.out.println("Flat " + rank + " Attempt    " + attempt + ".      If First ball breaks " + sum + " at most");
             floor = floor- 1;
-
-
-
         }while(floor>0 && rank < n);
+     
         System.out.println(Flist);
 
-
-
-
-
-
     }
-
-
 }
