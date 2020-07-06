@@ -4,46 +4,46 @@
 /*
 Problem:
 Given two balls and a building of 100 flats,
- how can you find the highest flat
+how can you find the highest flat
 from where you can drop a ball without breaking it
 using the lowest number of attempts?
 The balls are identical.
 
 Solution:
 Let's assume the flats are labeled 1 through n,in  ascending order, starting with 1 on the ground, and ending
-with 100 at the top of the building.
+with n at the top of the building.
 Now, let's assume that the first ball is dropped from flat k, and it breaks.
 It means that the second ball should cover for all the flats bellow flat k,
 that is flat 1, flat 2, ..., flat k-1, since any one of them could represent
 a flat from where the second ball if dropped could break as well.
 The sum of all these attempts it is equal to k.
 Let us also assume that k is the lowest number of attempts one need to perform using both balls,
-such that the flat 's rank from where a b second ball doesn't break  can be found.
-If the first ball doesn't break if dropped from flat k,
+such that the flat's rank from where a second ball doesn't break  can be found.
+If the first ball doesn't break when dropped from flat k,
 than,
-the next flat from where the first ball should be dropped such that preserve the lowest number of attempts
+the next flat from where the first ball should be dropped such that it  preserves the lowest number of attempts,
 it will be flat at rank k + (k-1)= 2k -1.
-If the first ball breaks, than there will be a total number of attempts,
+If at this attempt the first ball breaks, than there will be a total number of attempts,
 sum = 1 ( The first ball dropped at flat k) + 1 ( the first ball dropped at flat k + k-1) + k-2( the number
 of flats between flat k and flat 2k-1).
 The sum = k.
-If the first ball doesn't break after the second drop from flat k + (k-1), then tha
-next attempt for the first ball should be from flat k + (k -1) + (k-2).
-Continuing the reasoning , and assuming that the first ball doesn't break for anyone of the subsequent drops,
+If the first ball doesn't break after the second drop from flat k + (k-1), then the
+next attempt for dropping the first ball should be from flat k + (k -1) + (k-2).
+Continuing this pattern , and assuming that the first ball doesn't break for anyone of the subsequent drops,
 the flats from where the first ball should be  dropped are :
 k, k + (k-1), k + (k-1) + (k-2), ...,[ k + (k-1) +(k-2) +...+ 3 + 3 +1]
 
-Since the last flat should be at least n, one can write an equation:
+Since the last flat should be at least n, one can write an inequality:
 k + (k-1) + (k-2) + ...+  3 + 2 + 1 >= n.
 Or the equivalent form:
 k(k+1) / 2 >= n
-This is a quadratic equation :
-(*) k^2 + k - 2n >= 0.
-Solving the above equation, the solution for the best value k that will minimize
-the number of attempts to answer the problem is:
+This is a quadratic inequality :
+k^2 + k - 2n >= 0.
+The solution for the the problem is the lowest integer k in the set of integer solution for  the above inequality.
+The number of attempts to answer the problem is:
 
-k = ( sqrt(1 + 8*n))/2
-This solution guaranties the lowest value of k such that (*).
+k = min{ k(k+1) >= n}
+
 
 
 
