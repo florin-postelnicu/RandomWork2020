@@ -4,7 +4,7 @@
 /*
 Problem:
 Given two balls and a building of 100 flats,
- how can you find the highest flat
+how can you find the highest flat
 from where you can drop a ball without breaking it
 using the lowest number of attempts?
 The balls are identical.
