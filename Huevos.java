@@ -10,13 +10,13 @@ using the lowest number of attempts?
 The balls are identical.
 
 Solution:
-Let's assume the flats are labeled 1 through n,in  ascending order, starting with 1 on the ground, and ending
+Let's assume the flats are labeled 1 through n,in  ascending order, starting with 1 from the ground level, and ending
 with n at the top of the building.
 Now, let's assume that the first ball is dropped from flat k, and it breaks.
 It means that the second ball should cover for all the flats bellow flat k,
 that is flat 1, flat 2, ..., flat k-1, since any one of them could represent
 a flat from where the second ball if dropped could break as well.
-The sum of all these attempts it is equal to k.
+The sum of all these attempts is equal to k.
 Let us also assume that k is the lowest number of attempts one need to perform using both balls,
 such that the flat's rank from where a second ball doesn't break  can be found.
 If the first ball doesn't break when dropped from flat k,
@@ -37,12 +37,11 @@ Since the last flat should be at least n, one can write an inequality:
 k + (k-1) + (k-2) + ...+  3 + 2 + 1 >= n.
 Or the equivalent form:
 k(k+1) / 2 >= n
-This is a quadratic inequality :
-k^2 + k - 2n >= 0.
+
 The solution for the the problem is the lowest integer k in the set of integer solution for  the above inequality.
 The number of attempts to answer the problem is:
 
-k = min{ k(k+1) >= n}
+k = min{ x integer |x(x+1) >= 2n}
 
 
 
