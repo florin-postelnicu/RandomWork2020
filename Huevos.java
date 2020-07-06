@@ -4,14 +4,14 @@
 /*
 Problem:
 Given two balls and a building of 100 flats,
-how can you find the highest flat
+ how can you find the highest flat
 from where you can drop a ball without breaking it
 using the lowest number of attempts?
 The balls are identical.
 
 Solution:
 Let's assume the flats are labeled 1 through n,in  ascending order, starting with 1 on the ground, and ending
-with n at the top of the building.
+with 100 at the top of the building.
 Now, let's assume that the first ball is dropped from flat k, and it breaks.
 It means that the second ball should cover for all the flats bellow flat k,
 that is flat 1, flat 2, ..., flat k-1, since any one of them could represent
@@ -46,7 +46,7 @@ k = ( sqrt(1 + 8*n))/2
 This solution guaranties the lowest value of k such that (*).
 
 
-Solution for n = 100
+
 
 Given n = 100
 The Lowest number of attempts is 14
@@ -65,6 +65,9 @@ Flat 99 Attempt    11      If First ball breaks 14   trials  at most
 Flat 102 Attempt    12      If First ball breaks 14   trials  at most
 [0, 14, 27, 39, 50, 60, 69, 77, 84, 90, 95, 99, 102]
 
+Process finished with exit code 0
+
+
  */
 
 import java.util.Scanner;
@@ -72,7 +75,7 @@ import java.util.ArrayList;
 public class Huevos {
 
     public static int SolverQE(int number){
-        int sol = (int) ( Math.sqrt( 1+ 8* number)/2);
+        int sol = (int) ((-1 + Math.sqrt( 1+ 8* number))/2);
 
         return sol;
     }
@@ -83,12 +86,17 @@ public class Huevos {
         System.out.println("Enter the number of flats  n");
         int n = scan.nextInt();
         System.out.println("Given n = " + n);
-        System.out.println("The Lowest number of attempts is " +SolverQE(n));
+
         System.out.println("The flats you need to drop the balls, until one breaks, are :");
         int floor = SolverQE(n);
         int rank = 0;
         int attempt = 0;
+
         Flist.add(0);
+        if ( floor*(floor +1)/2 < n){
+            floor = floor +1;
+        }
+        System.out.println("The Lowest number of attempts is " + floor);
 
         do {
             rank = rank + floor;
