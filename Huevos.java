@@ -21,7 +21,7 @@ Let us also assume that k is the lowest number of attempts one need to perform u
 such that the flat's rank from where a second ball doesn't break  can be found.
 If the first ball doesn't break when dropped from flat k,
 than,
-the next flat from where the first ball should be dropped such that it  preserves the lowest number of attempts,
+the next flat from where the first ball should be dropped such that it  preserves the lowest number k of attempts,
 it will be flat at rank k + (k-1)= 2k -1.
 If at this attempt the first ball breaks, than there will be a total number of attempts,
 sum = 1 ( The first ball dropped at flat k) + 1 ( the first ball dropped at flat k + k-1) + k-2( the number
