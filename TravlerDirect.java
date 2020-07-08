@@ -1,4 +1,7 @@
-
+/*
+Enter the number of knights and find out the starting position for the game,
+such that the night in the last original position is the winner of the game.
+*/
 
 import java.util.Scanner;
 
