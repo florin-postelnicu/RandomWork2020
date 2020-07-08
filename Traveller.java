@@ -1,9 +1,9 @@
 
 
 /*
-A very intelligent and kind Traveller was trapped by a King, King wants to check his intelligence and kindness at the same time.
+A very intelligent and kind Traveler was trapped by a King, King wants to check his intelligence and kindness at the same time.
 
-So he sets up a scenario where he asks traveller to play the “Sword Killing” game.
+So he sets up a scenario where he asks traveler to play the “Sword Killing” game.
 
 In this game ’N’ number of people have to stand in a circle in an order 1 to ’N’ and someone of them has a Sword,
 so when the game starts the person with the sword kills the left adjacent person and passes the sword to the next person,
@@ -12,9 +12,9 @@ For example: – At starting, Person at 18th position have the sword, and the ga
 then the 18th position person kills 19th position person and passes sword to 20th position person,
 20th person kills 21st person and passes sword to 22nd person and so on till only one person survives.
 
-The twist King makes is that, he makes the traveller stand at 489th position in the circle,
+The twist King makes is that, he makes the traveler stand at 489th position in the circle,
 and asks traveller to choose any number of people he wants to make stand in the circle,
-where traveller’s position will be fixed (489th) and also gave him option for starting this game from any position
+where traveler’s position will be fixed (489th) and also gave him option for starting this game from any position
 (Sword Initially with this position) . The basic rules for the game still remains same.
 
 Given:
@@ -25,10 +25,11 @@ which in this case should be 489th position person.
 ==>> N :- Total no. of people standing in the circle at the starting. N includes traveller as well.
 For e.g. if N=500, it includes person standing at 489(or the traveller himself).
 It is also understandable that N>=489
-==>> Traveller is very Kind and wants to kill least no. of people as possible. Although he is kind but he prioritises his life over others.
-i.e. he wants to save himself, but by killing minimum no. of people.
+==>> Traveler is very Kind and wants to kill least nomber of people as possible. Although he is kind but he prioritises his life over others.
+i.e. he wants to save himself, but by killing minimum nomber of people.
 
-So you need to determine what would be value of N and SP, if Traveller wants to prove his kindness and intelligence.
+So you need to determine what would be value of N and SP, if Traveler wants to prove his kindness and intelligence.
+
 
 Solution for N = 18, and SP = 1:
 
