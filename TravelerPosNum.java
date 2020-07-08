@@ -1,4 +1,7 @@
-
+/*
+Feed the total number of knights k , and the position you are place in myposd , 
+to find out the starting position such that you are the winner of the game.
+*/
 import java.util.Scanner;
 public class TravelerPosNum {
     public static void main(String[] args) {
