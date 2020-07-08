@@ -29,6 +29,18 @@ It is also understandable that N>=489
 i.e. he wants to save himself, but by killing minimum no. of people.
 
 So you need to determine what would be value of N and SP, if Traveller wants to prove his kindness and intelligence.
+
+Solution for N = 18, and SP = 1:
+
+
+listA  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+[1, 3, 5, 7, 9, 11, 13, 15, 17]
+[17, 1, 5, 9, 13]
+[13, 17, 5]
+[5, 13]
+[5]
+
+
  */
 
 
@@ -39,7 +51,6 @@ public class Traveller{
     public static ArrayList<Integer> Method(ArrayList<Integer> listCheck){
         ArrayList<Integer> listB = new ArrayList<>();
         ArrayList<Integer> lista;
-
         for( int k = 0; k < listCheck.size(); k ++){
             if ( k%2 == 0){
                 listB.add(listCheck.get(k));
@@ -53,10 +64,9 @@ public class Traveller{
             }
             lista.set(0, listB.get(endof - 1));
         }
-
         return lista;
     }
-
+ 
     public static void main(String[] args) {
         Scanner scan = new Scanner((System.in));
         System.out.println("Enter the number of knights  ");
@@ -73,6 +83,4 @@ public class Traveller{
             System.out.println(listA);
         }
     }
-
 }
-
