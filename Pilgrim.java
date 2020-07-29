@@ -1,4 +1,10 @@
+/*
+In this problem the user can choose:
+- The number of knights playing the sword game
+- The pace used for determining the knights to be eliminated, and therefore the winning group
 
+The winning group has pace - 1 knights. 
+*/
 
 import java.util.ArrayList;
 import java.util.Scanner;
