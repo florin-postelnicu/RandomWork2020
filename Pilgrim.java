@@ -1,34 +1,26 @@
 
 
-
-
-
-
 import java.util.ArrayList;
-
 import java.util.Scanner;
 
 public class Pilgrim{
 
-    public static ArrayList<Integer> Method(ArrayList<Integer> listCheck){
+    public static ArrayList<Integer> Elimination_Method(ArrayList<Integer> listCheck, int skip){
 
         ArrayList<Integer> listB = new ArrayList<>();
 
         ArrayList<Integer> lista;
-
         for( int k = 0; k < listCheck.size(); k ++){
 
-            if (( k+1)%3 != 0) listB.add(listCheck.get(k));
+            if (( k+1)%skip != 0) listB.add(listCheck.get(k));
 
         }
 
         lista = (ArrayList<Integer>) listB.clone();
 
         int endof = listB.size();
-        int permute = listCheck.size()%3;
-
+        int permute = listCheck.size()%skip;
         for (int index = 0; index < endof ; index++) lista.set((index + permute) % endof, listB.get(index));
-
         return lista;
 
     }
@@ -37,35 +29,27 @@ public class Pilgrim{
 
     public static void main(String[] args) {
 
-//        Scanner scan = new Scanner((System.in));
-//
-//        System.out.println("Enter the number of knights  ");
-//
-//        int knights = scan.nextInt();
-        for( int knights = 3; knights <= 81; knights++) {
-            System.out.println(" Knights  " + knights);
+        Scanner scan = new Scanner((System.in));
 
-            ArrayList<Integer> listA = new ArrayList<>();
+        System.out.println("Enter the number of knights  ");
 
-            for (int j = 1; j <= knights; j++) {
+        int knights = scan.nextInt();
+        System.out.println("Enter the pace  ");
+        int pace = scan.nextInt();
 
-                listA.add(j);
+        System.out.println(" Knights  " + knights);
 
-            }
+        ArrayList<Integer> listA = new ArrayList<>();
 
-            System.out.println("listA  " + listA);
+        for (int j = 1; j <= knights; j++) { listA.add(j);}
 
-            while ((listA).size() > 2) {
+        System.out.println("listA  " + listA);
 
-                listA = (ArrayList<Integer>) Method(listA).clone();
+        while ((listA).size() > pace-1) {
 
-                Method(Method(listA));
-
-                System.out.println(listA);
-
-            }
+            listA = (ArrayList<Integer>) Elimination_Method(listA, pace).clone();
+            Elimination_Method(Elimination_Method(listA, pace), pace);
+            System.out.println(listA);
         }
-
     }
-
 }
